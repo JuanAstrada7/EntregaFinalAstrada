@@ -1,0 +1,24 @@
+{% extends "F1App/padre.html" %}
+
+{% block titulo %} 
+Acá puedes ver todas las Carreras
+{% endblock %} 
+
+{% block contenido1 %}
+
+</ol>
+
+{% for x in Carreras %}
+
+
+<li>Nombre: {{x.nombre}} </li>
+
+{% endfor %}
+
+<ol>
+
+<br>
+
+<a class="btn btn-primary" href="{% url 'Agregar Carrera' %}">  Agregar nuevas Carreras</a>
+
+{% endblock %} 

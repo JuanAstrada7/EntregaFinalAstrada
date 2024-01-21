@@ -1,0 +1,49 @@
+{% extends "F1App/padre.html" %}
+
+  {% block titulo %}  
+  
+  
+  <h1>Tabla de Puntos</h1>
+  
+  <form method="post" action="{% url 'Tabla de Puntos' %}">{% csrf_token %}
+
+    <h2>Puntos por Piloto</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Piloto</th>
+                <th>Puntos</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in tabla_pilotos %}
+                <tr>
+                    <td>{{ item.piloto.nombre }}</td>
+                    <td>{{ item.puntos }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <h2>Puntos por Equipo</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Equipo</th>
+                <th>Puntos</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in tabla_equipos %}
+                <tr>
+                    <td>{{ item.equipo }}</td>
+                    <td>{{ item.puntos }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+  </form>
+  
+{% endblock %} 

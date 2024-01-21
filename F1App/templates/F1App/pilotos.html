@@ -1,0 +1,24 @@
+{% extends "F1App/padre.html" %}
+
+{% block titulo %} 
+Acá puedes ver todos los Pilotos
+{% endblock %} 
+
+{% block contenido1 %}
+
+</ol>
+
+{% for x in piloto %}
+
+
+<li>Nombre: {{x.nombre}} </li>
+
+{% endfor %}
+
+<ol>
+
+<br>
+
+<a class="btn btn-primary" href="{% url 'Agregar Piloto' %}">  Agregar nuevos Pilotos</a>
+
+{% endblock %} 

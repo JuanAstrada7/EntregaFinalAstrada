@@ -1,0 +1,22 @@
+{% extends "F1App/padre.html" %}
+
+{% block titulo %} 
+Acá puedes ver todos las Carreras
+{% endblock %} 
+
+{% block contenido1 %}
+
+</ol>
+
+{% for x in object_list %}
+
+
+<li>Nombre: {{x.nombre}} </li>
+
+{% endfor %}
+
+<ol>
+
+<br>
+
+{% endblock %} 

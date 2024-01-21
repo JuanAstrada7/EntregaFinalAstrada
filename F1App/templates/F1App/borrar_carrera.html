@@ -1,0 +1,18 @@
+{% extends "F1App/padre.html" %}
+
+{% block titulo %} 
+Acá puedras eliminar Carreras 
+{% endblock %} 
+
+{% block contenido1 %}
+
+<form action="" method="POST">{% csrf_token %}
+
+    <p>¿Estás seguro de borrar la pelicula?: {{object}}</p>
+
+    <input type="submit" value="Borrar">
+
+</form>
+
+
+{% endblock %} 
